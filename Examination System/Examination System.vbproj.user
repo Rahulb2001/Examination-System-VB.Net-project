@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="AboutBox1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AddEmployeeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="addquestionform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="approvalformstu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="approvalhistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="changepass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="edit_update_question.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="examquestion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forgetPass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Loginform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="masterform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Registration Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="result2form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="resultform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="student_Details.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="stu_details.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="submitform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="view_employee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
