@@ -57,23 +57,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>The Computerized Examination system is a application software which is used
-by the schools and college in this pandemic in order to conduct the Examination
-in virtual way and also to enhance the skill of the students. It record the marks
-and performance of the student
-The main reason behind designing and developing this project is to enable
-transact in Easy way, and it also maintain the details about the students and the
-performance in their academics .
-This project handles the complete automation regarding the Examination. It also
-enables us to add records regarding new student, teacher ,staff , new students
-,questions and details about them.
-The existing system is limited with few modules and not easy to access the student
-details and details of the Examination. But our purpose system provides the
-proper student details and result of the Student , Adding of question and updating
-them in proper manner.</value>
-  </data>
 </root>

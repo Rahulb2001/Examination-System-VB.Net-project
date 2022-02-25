@@ -314,6 +314,8 @@ Partial Class addquestionform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Examination_System.My.Resources.Resources.question
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(996, 673)
         Me.ControlBox = False
         Me.Controls.Add(Me.GroupBox1)

@@ -9,13 +9,9 @@ Public Class Registration_Form
     ' Dim st As String = (psw.Next(1, 100000))
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Me.Hide()
-        ' Form1.Show()
+        Form1.Show()
     End Sub
-    'Public Sub random()
-    'Dim psw As New Random
-    'Dim st As Integer = (psw.Next(1, 10000))
-    'MessageBox.Show(st)
-    '    End Sub
+
     Private Sub Registration_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         data()
         TextBox2.Focus()
@@ -76,7 +72,6 @@ Public Class Registration_Form
         cmd1.ExecuteNonQuery()
         con.Close()
         pass()
-        '  MessageBox.Show("Please Note/Remember your password for the Further Use Ahead  " + st, "Password", MessageBoxButtons.OK, MessageBoxIcon.Information)
         MessageBox.Show("Student Sucessfully Registered ", " Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         TextBox2.Clear()
         TextBox3.Clear()
@@ -98,11 +93,7 @@ Public Class Registration_Form
         cmd1.ExecuteNonQuery()
         con.Close()
     End Sub
-    ' Sub validation()
-    'If TextBox1.Text = "" And TextBox2.Text = "" And TextBox3.Text = "" And TextBox4.Text = "" And TextBox5.Text = "" Then
-    '       MessageBox.Show("Please Enter All the Details", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-    'End If
-    'End Sub
+
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         TextBox2.Clear()
@@ -114,5 +105,60 @@ Public Class Registration_Form
         RadioButton2.Checked = False
         ComboBox1.SelectedIndex = -1
         ComboBox2.SelectedIndex = -1
+    End Sub
+    Private Sub TextBox2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox2.KeyPress
+        If Not (Asc(e.KeyChar) = 8) Then
+            Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyz"
+            If Not allowedChars.Contains(e.KeyChar.ToString.ToLower) Then
+                e.KeyChar = ChrW(0)
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub TextBox6_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox6.KeyPress
+        If Char.IsDigit(e.KeyChar) = False Then
+            If e.KeyChar = CChar(ChrW(Keys.Back)) Or e.KeyChar = CChar(ChrW(Keys.Space)) Then
+                e.Handled = False
+            Else
+                e.Handled = True
+
+            End If
+        End If
+
+    End Sub
+
+    Private Sub TextBox4_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox4.KeyPress
+        If Char.IsDigit(e.KeyChar) = False Then
+            If e.KeyChar = CChar(ChrW(Keys.Back)) Or e.KeyChar = CChar(ChrW(Keys.Space)) Then
+                e.Handled = False
+            Else
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub TextBox4_Leave(sender As Object, e As EventArgs) Handles TextBox4.Leave
+        If (TextBox4.TextLength < 10 Or TextBox4.TextLength > 13) Then
+            MsgBox("Mobile Number Should Be of 10-13 Digits", MsgBoxStyle.Exclamation, "Warning")
+            TextBox4.Focus()
+        End If
+    End Sub
+
+    Private Sub TextBox5_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox5.KeyPress
+        If Char.IsDigit(e.KeyChar) = False Then
+            If e.KeyChar = CChar(ChrW(Keys.Back)) Or e.KeyChar = CChar(ChrW(Keys.Space)) Then
+                e.Handled = False
+            Else
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub TextBox5_Leave(sender As Object, e As EventArgs) Handles TextBox5.Leave
+        If (TextBox5.TextLength < 5 Or TextBox5.TextLength > 10) Then
+            MsgBox("Password Should Be of 5-10 Digits", MsgBoxStyle.Exclamation, "Warning")
+            TextBox5.Focus()
+        End If
     End Sub
 End Class

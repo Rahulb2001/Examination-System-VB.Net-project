@@ -97,8 +97,8 @@ Public Class view_employee
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim q As Integer = InputBox("Please Enter the Question No ")
-        If (MsgBox("Do you want to Delete this Question ", vbYesNo + vbQuestion) = vbYes) Then
+        Dim q As Integer = InputBox("Please Enter the Employee Id ")
+        If (MsgBox("Do you want to Delete this Employee ", vbYesNo + vbQuestion) = vbYes) Then
             con.Open()
             cmd = New SqlCommand("delete employee where emp_no ='" & q & "'", con)
             cmd.ExecuteNonQuery()

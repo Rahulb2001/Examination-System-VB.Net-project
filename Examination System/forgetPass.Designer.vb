@@ -160,6 +160,8 @@ Partial Class forgetPass
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Examination_System.My.Resources.Resources.pc
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(618, 370)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label4)

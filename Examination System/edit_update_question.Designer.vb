@@ -336,6 +336,7 @@ Partial Class edit_update_question
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Examination_System.My.Resources.Resources.editquestion
         Me.ClientSize = New System.Drawing.Size(940, 699)
         Me.ControlBox = False
         Me.Controls.Add(Me.Button2)

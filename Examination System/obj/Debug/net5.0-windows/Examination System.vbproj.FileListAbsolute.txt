@@ -43,3 +43,5 @@ C:\Users\dell\Desktop\Examination System\Examination System\obj\Debug\net5.0-win
 C:\Users\dell\Desktop\Examination System\Examination System\obj\Debug\net5.0-windows\Examination_System.submitform.resources
 C:\Users\dell\Desktop\Examination System\Examination System\obj\Debug\net5.0-windows\Examination_System.result2form.resources
 C:\Users\dell\Desktop\Examination System\Examination System\obj\Debug\net5.0-windows\Examination_System.student_Details.resources
+C:\Users\dell\Desktop\Examination System\Examination System\obj\Debug\net5.0-windows\Examination_System.Statistics.resources
+C:\Users\dell\Desktop\Examination System\Examination System\obj\Debug\net5.0-windows\Examination_System.SplashScreen2.resources

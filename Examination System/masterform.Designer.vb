@@ -22,6 +22,7 @@ Partial Class masterform
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(masterform))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -41,7 +42,6 @@ Partial Class masterform
         Me.ViewStaffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ApproveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExamDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExamPasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -57,16 +57,20 @@ Partial Class masterform
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel5.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -127,7 +131,7 @@ Partial Class masterform
         '
         Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox1.Image = Global.Examination_System.My.Resources.Resources.close
-        Me.PictureBox1.Location = New System.Drawing.Point(1082, 17)
+        Me.PictureBox1.Location = New System.Drawing.Point(1106, 19)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(39, 29)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -141,9 +145,9 @@ Partial Class masterform
         Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label1.Location = New System.Drawing.Point(416, 19)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(394, 37)
+        Me.Label1.Size = New System.Drawing.Size(492, 37)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ONLINE EXAMINATION SYSTEM"
+        Me.Label1.Text = "COMPUTERISED EXAMINATION SYSTEM"
         '
         'MenuStrip1
         '
@@ -152,7 +156,7 @@ Partial Class masterform
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.MasterToolStripMenuItem, Me.ExamToolStripMenuItem, Me.StaffToolStripMenuItem, Me.StudentToolStripMenuItem, Me.SettingToolStripMenuItem, Me.LogoutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(632, 29)
+        Me.MenuStrip1.Size = New System.Drawing.Size(650, 29)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -160,8 +164,8 @@ Partial Class masterform
         '
         Me.HomeToolStripMenuItem.Image = Global.Examination_System.My.Resources.Resources.home
         Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
-        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(80, 25)
-        Me.HomeToolStripMenuItem.Text = "Home"
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(98, 25)
+        Me.HomeToolStripMenuItem.Text = "Statistics"
         '
         'MasterToolStripMenuItem
         '
@@ -181,20 +185,20 @@ Partial Class masterform
         'ADDQuestionToolStripMenuItem
         '
         Me.ADDQuestionToolStripMenuItem.Name = "ADDQuestionToolStripMenuItem"
-        Me.ADDQuestionToolStripMenuItem.Size = New System.Drawing.Size(179, 26)
+        Me.ADDQuestionToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
         Me.ADDQuestionToolStripMenuItem.Text = "&Add Question"
         '
         'ViewEditToolStripMenuItem
         '
         Me.ViewEditToolStripMenuItem.Name = "ViewEditToolStripMenuItem"
-        Me.ViewEditToolStripMenuItem.Size = New System.Drawing.Size(179, 26)
+        Me.ViewEditToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
         Me.ViewEditToolStripMenuItem.Text = "&View/Edit"
         '
         'ResultToolStripMenuItem
         '
         Me.ResultToolStripMenuItem.Name = "ResultToolStripMenuItem"
         Me.ResultToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
-        Me.ResultToolStripMenuItem.Size = New System.Drawing.Size(179, 26)
+        Me.ResultToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
         Me.ResultToolStripMenuItem.Text = "&Result"
         '
         'StaffToolStripMenuItem
@@ -219,7 +223,7 @@ Partial Class masterform
         '
         'StudentToolStripMenuItem
         '
-        Me.StudentToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ApproveToolStripMenuItem, Me.ExamDetailsToolStripMenuItem, Me.HistoryToolStripMenuItem})
+        Me.StudentToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ApproveToolStripMenuItem, Me.HistoryToolStripMenuItem})
         Me.StudentToolStripMenuItem.Image = Global.Examination_System.My.Resources.Resources.student
         Me.StudentToolStripMenuItem.Name = "StudentToolStripMenuItem"
         Me.StudentToolStripMenuItem.Size = New System.Drawing.Size(91, 25)
@@ -228,19 +232,13 @@ Partial Class masterform
         'ApproveToolStripMenuItem
         '
         Me.ApproveToolStripMenuItem.Name = "ApproveToolStripMenuItem"
-        Me.ApproveToolStripMenuItem.Size = New System.Drawing.Size(168, 26)
+        Me.ApproveToolStripMenuItem.Size = New System.Drawing.Size(139, 26)
         Me.ApproveToolStripMenuItem.Text = "&Approve"
-        '
-        'ExamDetailsToolStripMenuItem
-        '
-        Me.ExamDetailsToolStripMenuItem.Name = "ExamDetailsToolStripMenuItem"
-        Me.ExamDetailsToolStripMenuItem.Size = New System.Drawing.Size(168, 26)
-        Me.ExamDetailsToolStripMenuItem.Text = "&Exam Details"
         '
         'HistoryToolStripMenuItem
         '
         Me.HistoryToolStripMenuItem.Name = "HistoryToolStripMenuItem"
-        Me.HistoryToolStripMenuItem.Size = New System.Drawing.Size(168, 26)
+        Me.HistoryToolStripMenuItem.Size = New System.Drawing.Size(139, 26)
         Me.HistoryToolStripMenuItem.Text = "&History"
         '
         'SettingToolStripMenuItem
@@ -405,15 +403,6 @@ Partial Class masterform
         Me.Button1.Text = "Registration"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel4.Location = New System.Drawing.Point(202, 552)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(955, 82)
-        Me.Panel4.TabIndex = 5
-        '
         'Panel5
         '
         Me.Panel5.Controls.Add(Me.MenuStrip1)
@@ -434,11 +423,49 @@ Partial Class masterform
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Panel6.Controls.Add(Me.Label6)
+        Me.Panel6.Controls.Add(Me.Label5)
+        Me.Panel6.Controls.Add(Me.PictureBox3)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel6.Location = New System.Drawing.Point(202, 138)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(955, 414)
+        Me.Panel6.Size = New System.Drawing.Size(955, 496)
         Me.Panel6.TabIndex = 7
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label6.Location = New System.Drawing.Point(93, 61)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(780, 420)
+        Me.Label6.TabIndex = 2
+        Me.Label6.Text = resources.GetString("Label6.Text")
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label5.Location = New System.Drawing.Point(31, 21)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(458, 40)
+        Me.Label5.TabIndex = 1
+        Me.Label5.Text = "Computerised Examination System"
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.Examination_System.My.Resources.Resources.bg1
+        Me.PictureBox3.Location = New System.Drawing.Point(6, 9)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(946, 484)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 0
+        Me.PictureBox3.TabStop = False
         '
         'masterform
         '
@@ -448,7 +475,6 @@ Partial Class masterform
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel5)
-        Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -465,6 +491,9 @@ Partial Class masterform
         Me.Panel3.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -484,7 +513,6 @@ Partial Class masterform
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Button8 As Button
-    Friend WithEvents Panel4 As Panel
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents HomeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MasterToolStripMenuItem As ToolStripMenuItem
@@ -500,7 +528,6 @@ Partial Class masterform
     Friend WithEvents AddStaffToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ViewStaffToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ApproveToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ExamDetailsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExamPasswordToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ChangePasswordToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label4 As Label
@@ -508,4 +535,7 @@ Partial Class masterform
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel6 As Panel
     Friend WithEvents HistoryToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label5 As Label
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Label6 As Label
 End Class

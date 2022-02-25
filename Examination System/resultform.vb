@@ -4,6 +4,13 @@ Public Class resultform
     Dim nam, regno, course, semester, marks_scored, total_marks, percentage, grade, result As String
 
     Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dell\Desktop\exam pics\Exam_Database.mdf;Integrated Security=True;Connect Timeout=30")
+
+    Private Sub PictureBox2_Click_1(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Me.Close()
+        Loginform.Show()
+
+    End Sub
+
     Private Sub resultform_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         rr = InputBox("PLEASE ENTER YOUR REGNO")
         Dim sqlstr As String = "select regno from result where regno ='" & rr & "'"
@@ -126,7 +133,7 @@ Public Class resultform
         cmd1.ExecuteNonQuery()
         con.Close()
     End Sub
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) 
         Me.Close()
         Form1.Show()
     End Sub

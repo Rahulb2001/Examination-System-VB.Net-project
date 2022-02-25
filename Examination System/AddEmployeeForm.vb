@@ -21,6 +21,40 @@ Public Class AddEmployeeForm
         empno()
 
     End Sub
+    Private Sub TextBox2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox2.KeyPress
+        If Not (Asc(e.KeyChar) = 8) Then
+            Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyz"
+            If Not allowedChars.Contains(e.KeyChar.ToString.ToLower) Then
+                e.KeyChar = ChrW(0)
+                e.Handled = True
+            End If
+        End If
+    End Sub
+    Private Sub TextBox3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox3.KeyPress
+        If Not (Asc(e.KeyChar) = 8) Then
+            Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyz"
+            If Not allowedChars.Contains(e.KeyChar.ToString.ToLower) Then
+                e.KeyChar = ChrW(0)
+                e.Handled = True
+            End If
+        End If
+    End Sub
+    Private Sub TextBox4_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox4.KeyPress
+        If Char.IsDigit(e.KeyChar) = False Then
+            If e.KeyChar = CChar(ChrW(Keys.Back)) Or e.KeyChar = CChar(ChrW(Keys.Space)) Then
+                e.Handled = False
+            Else
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub TextBox4_Leave(sender As Object, e As EventArgs) Handles TextBox4.Leave
+        If (TextBox4.TextLength < 10 Or TextBox4.TextLength > 13) Then
+            MsgBox("Mobile Number Should Be of 10-13 Digits", MsgBoxStyle.Exclamation, "Warning")
+            TextBox4.Focus()
+        End If
+    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If Len(Trim(TextBox1.Text)) = 0 Then
@@ -91,7 +125,7 @@ Public Class AddEmployeeForm
         RadioButton2.Checked = False
     End Sub
     Public Sub pass()
-        Dim s As String = "Staff"
+        Dim s As String = "Admin"
         Dim sqlstr As String = "insert into password values('" & s & "','" & TextBox5.Text & "','" & TextBox6.Text & "')"
         con.Open()
         Dim cmd1 As SqlCommand = New SqlCommand(sqlstr, con)
@@ -108,5 +142,31 @@ Public Class AddEmployeeForm
         clear()
         empno()
 
+    End Sub
+
+    Private Sub TextBox5_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox5.KeyPress
+        If Not (Asc(e.KeyChar) = 8) Then
+            Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyz"
+            If Not allowedChars.Contains(e.KeyChar.ToString.ToLower) Then
+                e.KeyChar = ChrW(0)
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub TextBox6_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox6.KeyPress
+        If Char.IsDigit(e.KeyChar) = False Then
+            If e.KeyChar = CChar(ChrW(Keys.Back)) Or e.KeyChar = CChar(ChrW(Keys.Space)) Then
+                e.Handled = False
+            Else
+                e.Handled = True
+            End If
+        End If
+    End Sub
+    Private Sub TextBox6_Leave(sender As Object, e As EventArgs) Handles TextBox6.Leave
+        If (TextBox6.TextLength < 5 Or TextBox6.TextLength > 10) Then
+            MsgBox("Password Should Be of 5-10 Digits", MsgBoxStyle.Exclamation, "Warning")
+            TextBox4.Focus()
+        End If
     End Sub
 End Class

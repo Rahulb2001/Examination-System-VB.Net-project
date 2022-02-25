@@ -26,6 +26,8 @@ Public Class Loginform
             TextBox1.Focus()
             Exit Sub
         End If
+
+
         If Len(Trim(ComboBox1.Text)) = 0 Then
             MessageBox.Show("Please Select the usertype Correctly", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Exit Sub
@@ -35,6 +37,8 @@ Public Class Loginform
             TextBox1.Focus()
             Exit Sub
         End If
+        valid()
+
         sqlstr = "select * from password where u_rname ='" & TextBox1.Text & "' And password='" & TextBox2.Text & "' And type='" & ComboBox1.SelectedItem & "'"
         con.Open()
         Dim cmd As SqlCommand = New SqlCommand(sqlstr, con)
@@ -52,15 +56,36 @@ Public Class Loginform
             MessageBox.Show("Entered Username or password is incorrect", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
         con.Close()
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        ComboBox1.SelectedIndex = -1
+    End Sub
+    Public Sub valid()
+        Dim pattern As String = "^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zAZ0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$"
+        If TextBox1.Text = pattern Then
+            MessageBox.Show("Invalid Character", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            TextBox1.Focus()
+
+        End If
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
         masterform.Show()
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         If ComboBox1.SelectedItem = "Student" Then
             Label2.Text = "Regno"
+        Else
+            Label2.Text = "Username"
         End If
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub Loginform_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

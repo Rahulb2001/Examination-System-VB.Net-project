@@ -118,7 +118,7 @@ Partial Class view_employee
         Me.Panel2.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Panel2.Location = New System.Drawing.Point(0, 239)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(673, 375)
+        Me.Panel2.Size = New System.Drawing.Size(673, 388)
         Me.Panel2.TabIndex = 8
         '
         'TextBox7
@@ -297,7 +297,7 @@ Partial Class view_employee
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(983, 666)
+        Me.ClientSize = New System.Drawing.Size(983, 618)
         Me.ControlBox = False
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)

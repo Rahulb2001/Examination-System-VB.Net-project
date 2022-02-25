@@ -200,6 +200,8 @@ Partial Class changepass
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Examination_System.My.Resources.Resources.pc
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(666, 483)
         Me.ControlBox = False
         Me.Controls.Add(Me.TextBox4)

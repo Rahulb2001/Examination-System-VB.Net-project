@@ -64,11 +64,11 @@ Partial Class Form1
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label1.Location = New System.Drawing.Point(170, 27)
+        Me.Label1.Location = New System.Drawing.Point(147, 27)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(345, 37)
+        Me.Label1.Size = New System.Drawing.Size(441, 37)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Online Examination System "
+        Me.Label1.Text = "Computerised  Examination System "
         '
         'PictureBox2
         '

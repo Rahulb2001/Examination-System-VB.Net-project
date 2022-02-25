@@ -49,6 +49,12 @@
     <Compile Update="SplashScreen1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="SplashScreen2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Statistics.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="student_Details.vb">
       <SubType>Form</SubType>
     </Compile>
